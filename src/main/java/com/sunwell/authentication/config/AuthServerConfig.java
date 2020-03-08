@@ -2,6 +2,7 @@ package com.sunwell.authentication.config;
 
 import javax.sql.DataSource;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cglib.proxy.NoOp;
@@ -56,40 +57,43 @@ public class AuthServerConfig  extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients)
       throws Exception {
     	System.out.println("!!!!!!!!!!!!!!!!!!!! C O N F I G  CALLED");;
-//        clients
-//        	.jdbc(datasource)
-////        	.passwordEncoder(NoOpPasswordEncoder.getInstance())
+        clients
+        	.jdbc(datasource);
+//        	.passwordEncoder(NoOpPasswordEncoder.getInstance())
 //          .withClient("sampleClientId")
 //          .authorizedGrantTypes("implicit")
 //          .scopes("read")
 //          .autoApprove(true)
 //          .and()
 //          .withClient("clientIdPassword")
-//          .secret("secret")
+//          .secret("{noop}secret")
 //          .authorizedGrantTypes(
 //            "password","authorization_code", "refresh_token")
-//          .scopes("read");
-    	clients.inMemory()
-        .withClient("sampleClientId")
-        .authorizedGrantTypes("implicit")
-        .scopes("read", "write", "foo", "bar")
-        .autoApprove(false).accessTokenValiditySeconds(3600)
-
-        .and()
-        .withClient("fooClientIdPassword")
-        .secret("{noop}secret")
-        .authorizedGrantTypes("password", "authorization_code", "refresh_token")
-        .scopes("foo", "read", "write")
-        .accessTokenValiditySeconds(3600) // 1 hour
-        .refreshTokenValiditySeconds(2592000) // 30 days
-
-        .and()
-        .withClient("barClientIdPassword")
-        .secret("{noop}secret")
-        .authorizedGrantTypes("password", "authorization_code", "refresh_token")
-        .scopes("bar", "read", "write")
-        .accessTokenValiditySeconds(3600) // 1 hour
-        .refreshTokenValiditySeconds(2592000) // 30 days
+//          .scopes("foo", "read", "write")
+//          .accessTokenValiditySeconds(3600) // 1 hour
+//          .refreshTokenValiditySeconds(2592000); // 30 days
+          
+//    	clients.inMemory()
+//        .withClient("sampleClientId")
+//        .authorizedGrantTypes("implicit")
+//        .scopes("read", "write", "foo", "bar")
+//        .autoApprove(false).accessTokenValiditySeconds(3600)
+//
+//        .and()
+//        .withClient("fooClientIdPassword")
+//        .secret("{noop}secret")
+//        .authorizedGrantTypes("password", "authorization_code", "refresh_token")
+//        .scopes("foo", "read", "write")
+//        .accessTokenValiditySeconds(3600) // 1 hour
+//        .refreshTokenValiditySeconds(2592000) // 30 days
+//
+//        .and()
+//        .withClient("barClientIdPassword")
+//        .secret("{noop}secret")
+//        .authorizedGrantTypes("password", "authorization_code", "refresh_token")
+//        .scopes("bar", "read", "write")
+//        .accessTokenValiditySeconds(3600) // 1 hour
+//        .refreshTokenValiditySeconds(2592000) // 30 days
 	  ;
         
     }
