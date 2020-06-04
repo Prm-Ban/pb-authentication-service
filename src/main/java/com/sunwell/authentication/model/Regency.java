@@ -92,9 +92,6 @@ public class Regency implements Serializable
     @Override
     public int hashCode ()
     {
-//        int hash = 0;
-//        hash += (systemid != null ? systemid.hashCode () : 0);
-//        return hash;
     	return (int)systemId;
     }
 
@@ -108,9 +105,6 @@ public class Regency implements Serializable
             return false;
         }
         Regency other = (Regency) object;
-//        if ((this.systemId == null && other.systemId != null) || (this.systemId != null && !this.systemId.equals (other.systemId)))
-//            return false;
-//        return true;
         return systemId == other.systemId;
     }
 

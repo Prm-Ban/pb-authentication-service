@@ -20,16 +20,6 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-
-/**
- *
- * @author Yoga
- * @author Daisy
- * @author Irfin
- * 
- * @version 1.0 - Mar 1, 2014 ; Initial version
- * @version 1.1 - Jul 23, 2015 ; tipe data atribut m_arrAddress diubah dari Collection ke List.
- */
 @Entity
 @Inheritance (strategy = InheritanceType.JOINED)
 @Table (name = "contact")
@@ -95,21 +85,6 @@ public class Contact implements Serializable
     @Fetch (FetchMode.SELECT)
     private List<ContactAddress> addresses;
  
-//    @ManyToOne
-//    @JoinColumn (name = "sys_creator")
-//    private UserCredential sysCreator;
-//                                                                                
-//    @Column (name = "sys_createdate")
-//    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-//    private Calendar sysCreateDate;
-//    
-//    @ManyToOne
-//    @JoinColumn (name = "sys_lastupdater")
-//    private UserCredential sysLastUpdater;
-//    
-//    @Column (name = "sys_lastupdate")
-//    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-//    private Calendar sysLastUpdate;
     
     public Contact()
     {
@@ -278,107 +253,6 @@ public class Contact implements Serializable
 	{
 		type = _type;
 	}
-    
-  
-
-//    /**
-//     * @return the m_sys_creator
-//     */
-//    public UserCredential getSysCreator ()
-//    {
-//        return sysCreator;
-//    }
-//
-//    /**
-//     * @param m_sys_creator the m_sys_creator to set
-//     */
-//    public void setSysCreator (UserCredential m_sys_creator)
-//    {
-//        this.sysCreator = m_sys_creator;
-//    }
-//
-//    /**
-//     * @return the m_sys_createdate
-//     */
-//    public Calendar getSysCreateDate ()
-//    {
-//        return sysCreateDate;
-//    }
-//
-//    /**
-//     * @param m_sys_createdate the m_sys_createdate to set
-//     */
-//    public void setSysCreateDate (Calendar m_sys_createdate)
-//    {
-//        this.sysCreateDate = m_sys_createdate;
-//    }
-//
-//    /**
-//     * @return the m_sys_lastupdater
-//     */
-//    public UserCredential getSysLastUpdater ()
-//    {
-//        return sysLastUpdater;
-//    }
-//
-//    /**
-//     * @param _lastUpdater the m_sys_lastupdater to set
-//     */
-//    public void setSysLastUpdater (UserCredential _lastUpdater)
-//    {
-//        this.sysLastUpdater = _lastUpdater;
-//    }
-//
-//    /**
-//     * @return the m_sys_lastupdate
-//     */
-//    public Calendar getSysLastUpdate ()
-//    {
-//        return sysLastUpdate;
-//    }
-//
-//    /**
-//     * @param m_sys_lastupdate the m_sys_lastupdate to set
-//     */
-//    public void setSysLastUpdate (Calendar m_sys_lastupdate)
-//    {
-//        this.sysLastUpdate = m_sys_lastupdate;
-//    }
-
-//    @Override
-//    public int hashCode ()
-//    {
-//        //return super.hashCode (); //To change body of generated methods, choose Tools | Templates.
-////        return (systemId == null ? 0 : systemId.hashCode ());
-//        System.out.println(" Contact hashCode() called");
-//    	return (int)systemId;
-//    }
-//    
-//    /**
-//     * Warning - this method won't work in the case the id fields are not set
-//     * @param _o
-//     * @return 
-//     */
-//    @Override
-//    public boolean equals (Object _o)
-//    {
-//        System.out.println(" Contact equals(); called");
-//
-//    	if(_o == null)
-//    		return false;
-//        if (!(_o instanceof Contact)) {
-//            return false;
-//        }
-//        
-//        Contact other = (Contact) _o;
-//        return systemId == other.systemId;
-////        if ((this.systemId == null && other.systemId != null) || 
-////            (this.systemId != null && !this.systemId.equals(other.systemId))) {
-////            return false;
-////        }
-//        
-////        return true;
-//    }
     
     @Override
     public String toString ()

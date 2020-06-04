@@ -29,12 +29,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.validation.constraints.NotNull;
 
-/**
- * @author Yoga
- * @author Ahmad
- * @version 1.0
- * @created 24-Mar-2014 13:34:07
- */
 @Entity
 @Table (name = "usercredential")
 @NamedQueries({
@@ -128,10 +122,6 @@ public class UserCredential implements Serializable
     @Column (name = "systemid")
     private int systemId;
     
-//    @ManyToOne
-//    @JoinColumn (name = "group_id")
-//    private UserGroup group;
-    
     @NotNull(message="{error_no_user_name}")
     @Column (name = "username")
     private String userName;
@@ -143,9 +133,6 @@ public class UserCredential implements Serializable
     @Column (name = "isenable")
     private boolean isEnable;
     
-//    @Column (name = "systemmonitoringenabled")
-//    private boolean systemmonitoringenabled;
-    
     @Column (name = "expiredate")
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Calendar expireDate;
@@ -156,13 +143,6 @@ public class UserCredential implements Serializable
     @Column (name = "notes")
     private String notes;
     
-//    @Column (name = "image")
-//    private String image;
-//    
-//    @Column (name = "type")
-//    private String type;
-    
-    
     @Column (name = "sys_create_ip")
     private String sysCreateIp;
     
@@ -172,22 +152,6 @@ public class UserCredential implements Serializable
     @Column (name = "sys_last_login")
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Calendar sysLastLogin;
-    
-//    @ManyToOne
-//    @JoinColumn (name = "sys_creator")
-//    private UserCredential sysCreator;
-//    
-//    @Column (name = "sys_created")
-//    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-//    private Calendar sysCreated;
-//        
-//    @ManyToOne
-//    @JoinColumn (name = "sys_lastupdater")
-//    private UserCredential sysLastUpdater;
-//    
-//    @Column (name = "sys_lastupdate")
-//    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-//    private Calendar sysLastUpdate;
 
     public UserCredential ()
     {
@@ -214,22 +178,6 @@ public class UserCredential implements Serializable
     {
         this.systemId = m_systemid;
     }
-
-    /**
-     * @return the m_group
-     */
-//    public UserGroup getGroup ()
-//    {
-//        return group;
-//    }
-//
-//    /**
-//     * @param m_group the m_group to set
-//     */
-//    public void setGroup (UserGroup m_group)
-//    {
-//        this.group = m_group;
-//    }
 
     /**
      * @return the m_username
@@ -355,74 +303,9 @@ public class UserCredential implements Serializable
 	}
 
 
-//    /**
-//     * @return the m_sys_creator
-//     */
-//    public UserCredential getSysCreator ()
-//    {
-//        return sysCreator;
-//    }
-//
-//    /**
-//     * @param m_sys_creator the m_sys_creator to set
-//     */
-//    public void setSysCreator (UserCredential _sysCreator)
-//    {
-//        this.sysCreator = _sysCreator;
-//    }
-//
-//    /**
-//     * @return the m_sys_createdate
-//     */
-//    public Calendar getSysCreated ()
-//    {
-//        return sysCreated;
-//    }
-//
-//    /**
-//     * @param m_sys_createdate the m_sys_createdate to set
-//     */
-//    public void setSysCreated (Calendar _sysCreated)
-//    {
-//        this.sysCreated = _sysCreated;
-//    }
-//
-//    /**
-//     * @return the m_sys_lastupdater
-//     */
-//    public UserCredential getSysLastUpdater ()
-//    {
-//        return sysLastUpdater;
-//    }
-//
-//    /**
-//     * @param m_sys_lastupdater the m_sys_lastupdater to set
-//     */
-//    public void setSysLastUpdater (UserCredential _sysLastUpdater)
-//    {
-//        this.sysLastUpdater = _sysLastUpdater;
-//    }
-//
-//    /**
-//     * @return the m_sys_lastupdate
-//     */
-//    public Calendar getSysLastUpdate ()
-//    {
-//        return sysLastUpdate;
-//    }
-//
-//    /**
-//     * @param m_sys_lastupdate the m_sys_lastupdate to set
-//     */
-//    public void setSysLastUpdate (Calendar _sysLastUpdate)
-//    {
-//        this.sysLastUpdate = _sysLastUpdate;
-//    }
-
     @Override
     public int hashCode ()
     {
-//        return systemId != null ? systemId.hashCode () : 0;
     	return systemId;
     }
 
@@ -434,11 +317,6 @@ public class UserCredential implements Serializable
         }
         
         UserCredential other = (UserCredential) obj;
-//        if ((this.systemId == null && other.systemId != null) || 
-//            (this.systemId != null && !this.systemId.equals(other.systemId))) {
-//            return false;
-//        }
-//        return true;
         return systemId == other.systemId;
     }
 

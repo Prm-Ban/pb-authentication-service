@@ -59,7 +59,6 @@ public class UserController {
 		@RequestParam(value="sessionString", required=false) String _sessionString,
 		@RequestParam(value="systemId", required = false) Integer _systemId,
 		@RequestParam(value="name", required = false) String _name,
-//		@RequestParam(value="groupId", required = false) Integer _groupId,
 		Pageable _page) throws Exception 
 	{
 		Map<String,Object> retData = null;
@@ -81,9 +80,6 @@ public class UserController {
     			if(_name != null) {
         			usr = userService.findUserByName( _name);
         		}
-//    			else if(_groupId != null) {
-//        			pageUsers = userService.findUserByGroupId(_groupId, _page);
-//        		}
         		else {
         			pageUsers = userService.findAllUsers(_page);
         		}

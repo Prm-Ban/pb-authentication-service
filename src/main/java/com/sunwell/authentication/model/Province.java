@@ -100,10 +100,7 @@ public class Province implements Serializable
     @Override
     public int hashCode ()
     {
-//        int hash = 0;
-//        hash += (systemId != null ? systemId.hashCode () : 0);
         return (int) systemId;
-//        return hash;
     }
 
     @Override
@@ -117,12 +114,6 @@ public class Province implements Serializable
         
         Province other = (Province) object;
         return systemId == other.systemId;
-//        if ((this.systemId == null && other.systemId != null) 
-//            || 
-//            (this.systemId != null && !this.systemId.equals (other.systemId)))
-//            return false;
-        
-//        return true;
     }
 
     @Override

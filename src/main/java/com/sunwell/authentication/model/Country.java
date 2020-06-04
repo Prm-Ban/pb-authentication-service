@@ -104,7 +104,6 @@ public class Country
         
         return true;
         
-//        return c.isoCodeS2.equals (this.isoCodeS2);
     }
     
     @Override

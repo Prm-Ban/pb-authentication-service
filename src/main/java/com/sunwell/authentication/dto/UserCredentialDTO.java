@@ -23,7 +23,6 @@ import com.sunwell.authentication.model.UserCredential;
 public class UserCredentialDTO extends StandardDTO implements Serializable
 {    
     private Integer systemId;
-//    private UserGroupDTO group;
     private String userName;
     private String pwd;
     private Calendar expiredate;
@@ -42,26 +41,19 @@ public class UserCredentialDTO extends StandardDTO implements Serializable
     
     public void setData(UserCredential _uc) {
 		systemId = _uc.getSystemId();
-//        if(_uc.getGroup() != null)
-//        		group = new UserGroupDTO(_uc.getGroup());
         userName = _uc.getUserName();
-//        pwd = _uc.getPwd();
         expiredate = _uc.getExpireDate();
         notes = _uc.getNotes();
-//        setImage(_uc.getImage());
     }
     
     public UserCredential getData() {
     		UserCredential uc = new UserCredential();
     		if(systemId != null)
     			uc.setSystemId(systemId);
-//    		if(group != null)
-//    			uc.setGroup(group.getData());
     		uc.setUserName(userName);
     		uc.setPwd(pwd);
     		uc.setExpireDate(expiredate);
     		uc.setNotes(notes);
-//    		uc.setImage(getImage());
     		return uc;
     }
 
@@ -80,22 +72,6 @@ public class UserCredentialDTO extends StandardDTO implements Serializable
     {
         this.systemId = m_systemid;
     }
-
-//    /**
-//     * @return the m_group
-//     */
-//    public UserGroupDTO getGroup ()
-//    {
-//        return group;
-//    }
-//
-//    /**
-//     * @param m_group the m_group to set
-//     */
-//    public void setGroup (UserGroupDTO _group)
-//    {
-//        this.group = _group;
-//    }
 
     /**
      * @return the m_username

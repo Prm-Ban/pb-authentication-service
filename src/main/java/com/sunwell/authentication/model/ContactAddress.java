@@ -48,22 +48,6 @@ public class ContactAddress implements Serializable, Cloneable
     @JoinColumn (name = "regency_id")
     private Regency regency;
 
-//    @ManyToOne
-//    @JoinColumn (name = "sys_creator")
-//    private UserCredential sysCreator;
-//
-//    @Column (name = "sys_createdate")
-//    @Temporal(javax.persistence.TemporalType.DATE)
-//    private Calendar sysCreateDate;
-//
-//    @ManyToOne
-//    @JoinColumn (name = "sys_lastupdater")
-//    private UserCredential sysLastUpdater;
-//
-//    @Column (name = "sys_lastupdate")
-//    @Temporal(javax.persistence.TemporalType.DATE)
-//    private Calendar sysLastUpdate;
-    
 
     /**
      * @return the m_systemid
@@ -117,75 +101,9 @@ public class ContactAddress implements Serializable, Cloneable
         regency = _r;
     }
 
-    /**
-     * @return the m_sys_creator
-     */
-//    public UserCredential getSystemCreator ()
-//    {
-//        return sysCreator;
-//    }
-//
-//    /**
-//     * @param m_systemcreator the m_sys_creator to set
-//     */
-//    public void setSystemCreator (UserCredential m_systemcreator)
-//    {
-//        this.sysCreator = m_systemcreator;
-//    }
-//
-//    /**
-//     * @return the m_sys_createdate
-//     */
-//    public Calendar getSystemCreateDate ()
-//    {
-//        return sysCreateDate;
-//    }
-//
-//    /**
-//     * @param m_systemcreatedate the m_sys_createdate to set
-//     */
-//    public void setSystemCreateDate (Calendar m_systemcreatedate)
-//    {
-//        this.sysCreateDate = m_systemcreatedate;
-//    }
-
-//    /**
-//     * @return the m_sys_lastupdater
-//     */
-//    public UserCredential getSystemlastUpdater ()
-//    {
-//        return sysLastUpdater;
-//    }
-//
-//    /**
-//     * @param m_systemlastupdater the m_sys_lastupdater to set
-//     */
-//    public void setSystemlastUpdater (UserCredential m_systemlastupdater)
-//    {
-//        this.sysLastUpdater = m_systemlastupdater;
-//    }
-//
-//    /**
-//     * @return the m_sys_lastupdate
-//     */
-//    public Calendar getSystemLastUpdate ()
-//    {
-//        return sysLastUpdate;
-//    }
-//
-//    /**
-//     * @param m_systemlastupdate the m_sys_lastupdate to set
-//     */
-//    public void setSystemLastUpdate (Calendar m_systemlastupdate)
-//    {
-//        this.sysLastUpdate = m_systemlastupdate;
-//    }
-
     @Override
     public int hashCode ()
     {
-        //return super.hashCode (); //To change body of generated methods, choose Tools | Templates.
-//        return (systemId == null ? 0 : systemId.hashCode ());
     	return (int)systemId;
     }
 
